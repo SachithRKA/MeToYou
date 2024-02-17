@@ -1,0 +1,51 @@
+.header {
+    background-color: white;
+    opacity: 0.6;
+    padding-left: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-family: Share Tech Mono, monospace;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: $color7;
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+    .logo {
+        float: left;
+    }
+
+    .links {
+        float: right;    
+        padding-left: 530px;
+        margin-top: 20px;
+
+        .about, .contact {
+            margin-left: 10px;
+            text-decoration: none;
+            color: $color7;
+            justify-content: flex-end;
+            overflow: hidden;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: attr(data-content);
+                top: 0;
+                left: 0;
+                width: 0;
+                color: #306af3;
+                white-space: nowrap;
+                overflow: hidden;
+                transition: width 275ms ease;
+            }
+
+            &:hover::before {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.home {
+    background-color: white;
+    opacity: 0.6;
+    width: 800px;
+    height: 90vh;
+    padding: 10px;
+    margin:0;
+    margin-top: 20px;
+    text-align: justify;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Share Tech Mono, monospace;
+
+    .title {
+        font-weight: 600;
+        font-size: 2.5rem;
+        color: $color7;
+
+        &:hover {
+            .title-span {
+                background-color: $color7;
+                color: white;
+                opacity: 1;
+            }
+        }
+    }
+
+    .description {
+        font-weight: 300;
+        font-size: 1rem;
+        text-align: center;
+        color: #4c9e9e;
+    }
+
+    .home-button {
+        padding: 10px 20px;
+        font-family: Share Tech Mono, monospace;
+        font-weight: 600;
+        font-size: 1.5rem;
+        background-color: #9cb9fc;
+        border: none;
+        color: white;
+        opacity: 0.6;
+
+        &:hover {
+            background-color: #3267e2;
+            opacity: 0.8;
+        }
+
+        &:active {
+            background-color: transparent;
+            color: #3267e2;
+            opacity: 0.6;
+        }
+    }
+}

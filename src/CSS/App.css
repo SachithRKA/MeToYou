@@ -1,0 +1,114 @@
+:root {
+  --holographic-degree: 60deg;
+  --holographic-second-degree: 75deg; }
+
+html::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(at 30% -5%, #92f2f2, #d6cff1, rgba(255, 255, 255, 0) 25%), radial-gradient(at 50% 70%, #c4f2e5, rgba(255, 255, 255, 0) 30%), radial-gradient(at 70% 0%, #d6cff1, rgba(255, 255, 255, 0) 20%), linear-gradient(var(--holographic-second-degree), #92f2f2 5%, rgba(255, 255, 255, 0), #a8d0f0, rgba(255, 255, 255, 0), #eed5f2, rgba(255, 255, 255, 0), #d6cff1, rgba(255, 255, 255, 0), #c4f2e5 90%), radial-gradient(at 30% 50%, #92f2f2, rgba(255, 255, 255, 0) 30%), radial-gradient(at 30% 50%, #9cb9fc, rgba(255, 255, 255, 0) 30%), radial-gradient(at 100% 50%, #92f2f2, #c2dcf2, rgba(255, 255, 255, 0) 50%), linear-gradient(var(--holographic-degree), #92f2f2 5%, #a8d0f0 10%, #d6cff1, #eed5f2 20%, #a8d0f0, #a8d0f0 30%, #d6cff1, #c2dcf2 40%, #92f2f2, #a8d0f0 70%);
+  z-index: -1;
+  animation: holographicAnimation 1s infinite alternate; }
+
+@keyframes holographicAnimation {
+  from {
+    --holographic-second-degree: 60deg; }
+  to {
+    --holographic-second-degree: calc(var(--holographic-second-degree) - 0.01deg); } }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0; }
+
+.home {
+  background-color: white;
+  opacity: 0.6;
+  width: 800px;
+  height: 90vh;
+  padding: 10px;
+  margin: 0;
+  margin-top: 20px;
+  text-align: justify;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Share Tech Mono, monospace; }
+  .home .title {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #9cb9fc; }
+    .home .title:hover .title-span {
+      background-color: #9cb9fc;
+      color: white;
+      opacity: 1; }
+  .home .description {
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+    color: #4c9e9e; }
+  .home .home-button {
+    padding: 10px 20px;
+    font-family: Share Tech Mono, monospace;
+    font-weight: 600;
+    font-size: 1.5rem;
+    background-color: #9cb9fc;
+    border: none;
+    color: white;
+    opacity: 0.6; }
+    .home .home-button:hover {
+      background-color: #3267e2;
+      opacity: 0.8; }
+    .home .home-button:active {
+      background-color: transparent;
+      color: #3267e2;
+      opacity: 0.6; }
+
+.header {
+  background-color: white;
+  opacity: 0.6;
+  padding-left: 20px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-family: Share Tech Mono, monospace;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #9cb9fc;
+  display: flex;
+  align-items: center;
+  align-content: center; }
+  .header .logo {
+    float: left; }
+  .header .links {
+    float: right;
+    padding-left: 530px;
+    margin-top: 20px; }
+    .header .links .about, .header .links .contact {
+      margin-left: 10px;
+      text-decoration: none;
+      color: #9cb9fc;
+      justify-content: flex-end;
+      overflow: hidden;
+      position: relative; }
+      .header .links .about::before, .header .links .contact::before {
+        position: absolute;
+        content: attr(data-content);
+        top: 0;
+        left: 0;
+        width: 0;
+        color: #306af3;
+        white-space: nowrap;
+        overflow: hidden;
+        transition: width 275ms ease; }
+      .header .links .about:hover::before, .header .links .contact:hover::before {
+        width: 100%; }
+
+/*# sourceMappingURL=App.css.map */
